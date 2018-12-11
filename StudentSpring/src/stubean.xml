@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="student1" class="com.spring.Student" scope="singleton">
+
+<property name="sid" value="01"></property>
+<property name="name" value="Anu"></property>
+<property name="department">
+<ref bean="department1"></ref></property>
+</bean>
+
+
+<bean name="department1" class="com.spring.Department">
+<property name="did" value="011"/>
+<property name="dname" value="Admin"/>
+</bean>
+
+
+
+</beans>
+  
